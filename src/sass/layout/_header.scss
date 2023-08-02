@@ -1,0 +1,70 @@
+@use '../partials/mixins' as m;
+@use '../partials/variables' as v;
+
+.header {
+    @include m.flex(center, space-between);
+    background: v.$azul;
+    flex-wrap: wrap;
+    gap: 1rem;
+    padding: 1.5rem;
+
+    .icon-header {
+        width: 2.5rem;
+        background-color: v.$blanco;
+        padding: .5rem;
+        border-radius: 10px;
+    }
+
+    h1 {
+        color: v.$blanco;
+        font: {
+            family: v.$fuente-noto;
+            weight: 900;
+        }
+    }
+
+    nav {
+        @include m.flex(center, space-between);
+        gap: 2rem;
+    }
+}
+
+//abrir menu dom
+
+.menu-perfil {
+    display: none;
+}
+
+.menu-perfil__abrir {
+    @include m.flex(center, center);
+    gap: 4rem;
+    padding: 1rem 0;
+    background-color: v.$naranja;
+    animation: animacionMenu .5s ;
+    a{
+        color: v.$blanco;
+        font: {
+            size:1.1rem;
+            family: v.$fuente-noto;
+        }
+
+        transition: color .7s ease-in;
+        &:hover {
+            color: black;
+        }
+    }
+}
+
+
+@keyframes animacionMenu {
+    0% {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translate(1);
+        opacity: 1;
+    }
+}
+

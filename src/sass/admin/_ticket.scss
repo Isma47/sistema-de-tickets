@@ -1,0 +1,55 @@
+@use './../partials/mixins' as m;
+@use './../partials/variables' as v;
+
+.title-ticket {
+    margin-top: 1rem;
+    text-align: center;
+    font-family: v.$fuente-monserrat;
+}
+
+.grid-ticket {
+    @include m.grid(1, 1fr);
+    align-items: center;
+    gap: 2rem;
+
+    @include m.tablet {
+        @include m.grid(2, 1fr);
+    }
+
+}
+
+.ticket {
+    padding: 1rem;
+    margin-top: 2rem;
+    background-color: v.$amarillo;
+    border-radius: 10px;
+
+    span {
+        font-weight: 900;
+        font-size: 1.1rem;
+    }
+    p,a {
+        margin: .5rem 0 ;
+        font: {
+            family: v.$fuente-noto
+        };
+    }
+
+    input {
+        display: inline-block;
+        background-color: v.$blanco;
+        padding: 1rem 3rem;
+        color: v.$negro;
+        border-radius: 10px;
+        border: none;
+        font : {
+            size:1rem;
+            weight: 900;
+        }
+
+        transition:background-color .5s ease-in ;
+        &:hover {
+            background-color: v.$naranja;
+        } 
+    }
+}

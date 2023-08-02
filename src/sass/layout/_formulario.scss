@@ -1,0 +1,102 @@
+@use "../partials/variables" as v;
+@use "../partials/mixins" as m;
+
+.main-form {
+  margin: 3rem auto;
+  background-color: v.$amarillo;
+  max-width: 80rem;
+  padding: 1rem;
+  border-radius: 10px;
+}
+
+.main-form {
+  @include m.grid(2, 1fr);
+  gap: 3rem;
+}
+
+//forilario generico
+.formulario {
+  display: flex;
+  flex-direction: column;
+
+  .form-fecha,
+  .form-fotos,
+  .form-problema {
+    display: flex;
+    flex-direction: column;
+  }
+
+  div {
+    position: relative;
+    margin: 0.5rem 0;
+
+    span {
+      font-size: 0.6rem;
+      color: v.$rojo;
+    }
+  }
+  label {
+    padding: 0.3rem 0;
+    font: {
+      size: 1.3rem;
+      family: v.$fuente-noto;
+      weight: 600;
+    }
+  }
+
+  input {
+    padding: 0.5rem;
+    border: none;
+  }
+
+  input[type="submit"] {
+    margin: 1rem auto 0;
+    padding: 1rem 5rem;
+    border-radius: 10px;
+    font-weight: 900;
+  }
+}
+
+//otros paneles de otros form
+
+//from index-panel de control
+.main-historial {
+    overflow-y: auto;
+  .historial {
+    margin: 1rem 0;
+    background-color: v.$blanco;
+    padding: 1rem;
+    border-radius: 10px;
+
+    h2,
+    p {
+      font-family: v.$fuente-noto;
+    }
+
+    h2 {
+      margin: 1rem 0;
+      font: {
+        weight: 900;
+        size: 2rem;
+      }
+    }
+
+    p {
+      margin: 1rem 0;
+    }
+
+    a {
+        display: inline-block;
+        background-color: v.$amarillo;
+        padding: 1rem 2rem;
+        color: v.$negro;
+        margin: auto;
+        border-radius: 10px;
+        font: {
+            weight: 600;
+            family: v.$fuente-noto;
+            size: 1.2rem;
+        }
+    }
+  }
+}

@@ -1,0 +1,346 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&family=Noto+Sans:wght@400;600&display=swap");
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #023047;
+  flex-wrap: wrap;
+  gap: 1rem;
+  padding: 1.5rem;
+}
+.header .icon-header {
+  width: 2.5rem;
+  background-color: #fff;
+  padding: 0.5rem;
+  border-radius: 10px;
+}
+.header h1 {
+  color: #fff;
+  font-family: "Noto Sans", sans-serif;
+  font-weight: 900;
+}
+.header nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+.menu-perfil {
+  display: none;
+}
+
+.menu-perfil__abrir {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4rem;
+  padding: 1rem 0;
+  background-color: #fb8500;
+  animation: animacionMenu 0.5s;
+}
+.menu-perfil__abrir a {
+  color: #fff;
+  font-size: 1.1rem;
+  font-family: "Noto Sans", sans-serif;
+  transition: color 0.7s ease-in;
+}
+.menu-perfil__abrir a:hover {
+  color: black;
+}
+
+@keyframes animacionMenu {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translate(1);
+    opacity: 1;
+  }
+}
+.main-form {
+  margin: 3rem auto;
+  background-color: #ffb703;
+  max-width: 80rem;
+  padding: 1rem;
+  border-radius: 10px;
+}
+
+.main-form {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 3rem;
+}
+
+.formulario {
+  display: flex;
+  flex-direction: column;
+}
+.formulario .form-fecha,
+.formulario .form-fotos,
+.formulario .form-problema {
+  display: flex;
+  flex-direction: column;
+}
+.formulario div {
+  position: relative;
+  margin: 0.5rem 0;
+}
+.formulario div span {
+  font-size: 0.6rem;
+  color: #bf0603;
+}
+.formulario label {
+  padding: 0.3rem 0;
+  font-size: 1.3rem;
+  font-family: "Noto Sans", sans-serif;
+  font-weight: 600;
+}
+.formulario input {
+  padding: 0.5rem;
+  border: none;
+}
+.formulario input[type=submit] {
+  margin: 1rem auto 0;
+  padding: 1rem 5rem;
+  border-radius: 10px;
+  font-weight: 900;
+}
+
+.main-historial {
+  overflow-y: auto;
+}
+.main-historial .historial {
+  margin: 1rem 0;
+  background-color: #fff;
+  padding: 1rem;
+  border-radius: 10px;
+}
+.main-historial .historial h2,
+.main-historial .historial p {
+  font-family: "Noto Sans", sans-serif;
+}
+.main-historial .historial h2 {
+  margin: 1rem 0;
+  font-weight: 900;
+  font-size: 2rem;
+}
+.main-historial .historial p {
+  margin: 1rem 0;
+}
+.main-historial .historial a {
+  display: inline-block;
+  background-color: #ffb703;
+  padding: 1rem 2rem;
+  color: #000;
+  margin: auto;
+  border-radius: 10px;
+  font-weight: 600;
+  font-family: "Noto Sans", sans-serif;
+  font-size: 1.2rem;
+}
+
+.reporte-general {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  padding: 2rem;
+  gap: 1rem;
+}
+@media (min-width: 768px) {
+  .reporte-general {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+.reporte-general div {
+  padding: 1rem;
+  border-radius: 10px;
+  border: solid #ffb703;
+}
+.reporte-general div h3 {
+  margin-bottom: 1rem;
+  text-align: center;
+  font-weight: 900;
+  font-family: "Noto Sans", sans-serif;
+  font-size: 1.5rem;
+}
+.reporte-general div a {
+  color: #000;
+  padding: 0.25rem;
+  font-size: 0.9rem;
+  font-family: "Noto Sans", sans-serif;
+}
+.reporte-general div a:hover {
+  color: #fff;
+}
+.reporte-general div img {
+  max-width: 100%;
+}
+.reporte-general div .enviar-a {
+  display: inline-block;
+  padding: 0.3rem 3rem;
+  border-radius: 10px;
+  background: #fb8500;
+}
+.reporte-general .reporte {
+  border: none;
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+}
+
+.form-login {
+  max-width: 80rem;
+  background-color: #023047;
+  margin: 5rem auto;
+  border-radius: 20px;
+}
+.form-login section {
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+}
+.form-login section label {
+  color: #fff;
+  font-weight: 900;
+  font-size: 1.5rem;
+  font-family: "Noto Sans", sans-serif;
+}
+.form-login section input {
+  margin: 0.4rem 0;
+  border: none;
+  padding: 0.5rem;
+  border-radius: 5px;
+}
+.form-login section select {
+  margin: 0.4rem 0;
+  border: none;
+  padding: 0.5rem;
+  border-radius: 5px;
+}
+.form-login section input[type=submit] {
+  border-radius: 10px;
+  margin: 2rem 0;
+  padding: 0.5rem 3rem;
+  transition: all 0.4s ease-in;
+  font-font-family: "Noto Sans", sans-serif;
+  font-weight: 900;
+  font-size: 1rem;
+}
+.form-login section input[type=submit]:hover {
+  background-color: #fb8500;
+}
+.form-login .crear-cuenta {
+  display: block;
+  padding: 1rem;
+  border-radius: 5px;
+  background-color: #ffb703;
+  color: #000;
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 900;
+  font-family: "Noto Sans", sans-serif;
+  transition: all 0.4s ease-in;
+}
+.form-login .crear-cuenta:hover {
+  color: #fff;
+  background-color: #fb8500;
+}
+
+.error {
+  max-width: 40rem;
+  margin: 1rem auto;
+  padding: 0.5rem;
+  border-radius: 10px;
+  background-color: #bf0603;
+  color: #fff;
+  text-align: center;
+  font-family: "Noto Sans", sans-serif;
+  font-size: 1.5rem;
+}
+
+.exito {
+  max-width: 30rem;
+  background-color: #219c44;
+  margin: 2rem auto;
+  padding: 1rem;
+  text-align: center;
+  border-radius: 10px;
+  font-size: 1.2rem;
+  font-family: "Noto Sans", sans-serif;
+}
+
+*,
+*::after, *::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/*
+font-family: 'Montserrat', sans-serif;
+font-family: 'Noto Sans', sans-serif;
+*/
+img {
+  display: block;
+  max-width: 100%;
+}
+
+a {
+  text-decoration: none;
+}
+
+.contenedor {
+  max-width: 1200px;
+  margin: auto;
+}
+
+.title-ticket {
+  margin-top: 1rem;
+  text-align: center;
+  font-family: "Montserrat", sans-serif;
+}
+
+.grid-ticket {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  align-items: center;
+  gap: 2rem;
+}
+@media (min-width: 768px) {
+  .grid-ticket {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.ticket {
+  padding: 1rem;
+  margin-top: 2rem;
+  background-color: #ffb703;
+  border-radius: 10px;
+}
+.ticket span {
+  font-weight: 900;
+  font-size: 1.1rem;
+}
+.ticket p, .ticket a {
+  margin: 0.5rem 0;
+  font-family: "Noto Sans", sans-serif;
+}
+.ticket input {
+  display: inline-block;
+  background-color: #fff;
+  padding: 1rem 3rem;
+  color: #000;
+  border-radius: 10px;
+  border: none;
+  font-size: 1rem;
+  font-weight: 900;
+  transition: background-color 0.5s ease-in;
+}
+.ticket input:hover {
+  background-color: #fb8500;
+}
+
+/*# sourceMappingURL=app.css.map */

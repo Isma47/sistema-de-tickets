@@ -1,0 +1,113 @@
+@use '../partials/mixins' as m;
+@use '../partials/variables' as v;
+
+//login
+
+.form-login {
+    max-width: 80rem;
+    background-color: v.$azul;
+    margin: 5rem auto;
+    border-radius: 20px;
+
+    section {
+        padding: 2rem;
+        display: flex;
+        flex-direction: column;
+
+        label {
+            color: v.$blanco;
+
+            font: {
+                weight: 900;
+                size: 1.5rem;
+                family: v.$fuente-noto;
+            }
+        }
+
+ 
+        input {
+            margin: .4rem 0;
+            border: none;
+            padding: .5rem;
+            border-radius: 5px;
+        }
+
+        select {
+            margin: .4rem 0;
+            border: none;
+            padding: .5rem;
+            border-radius: 5px;
+        }
+
+        input[type="submit"] {
+            border-radius: 10px;
+            margin: 2rem 0;
+            padding: .5rem 3rem;
+
+            transition: all .4s ease-in;
+
+            font: {
+                font-family: v.$fuente-noto;
+                weight:900;
+                size: 1rem;
+            }
+
+            &:hover {
+                background-color: v.$naranja;
+            }
+        }
+    }
+
+
+    .crear-cuenta {
+        display: block;
+        padding: 1rem;
+        border-radius: 5px;
+        background-color: v.$amarillo;
+        color: v.$negro;
+        text-align: center;
+        font: {
+            size:2rem;
+            weight:900;
+            family: v.$fuente-noto;
+        }
+
+        transition: all .4s ease-in;
+        &:hover {
+            color: v.$blanco;
+            background-color:  v.$naranja;
+        }
+    }
+}
+
+//Cuando hay errores al llenar el formulario.
+
+.error {
+    max-width: 40rem;
+    margin:1rem auto;
+    padding: .5rem;
+    border-radius: 10px;
+    background-color: v.$rojo;
+    color: v.$blanco;
+    text-align: center;
+
+    font: {
+        family: v.$fuente-noto;
+        size: 1.5rem;
+    }
+}
+
+.exito {
+    max-width: 30rem;
+    background-color: v.$verde;
+    margin: 2rem auto;
+    padding: 1rem;
+    text-align: center;
+    border-radius: 10px;
+
+    font: {
+        size:1.2rem;
+        family: v.$fuente-noto;
+
+    }
+}

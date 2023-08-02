@@ -1,0 +1,59 @@
+@use '../partials/variables' as v;
+@use '../partials/mixins' as m;
+
+.reporte-general {
+    @include m.grid(1, 1fr);
+    padding: 2rem;
+    gap: 1rem;
+    @include m.tablet {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    div{
+        padding: 1rem;
+        border-radius: 10px;
+
+        border: solid v.$amarillo;
+
+        h3 {
+            margin-bottom: 1rem;
+            text-align: center;
+            font: {
+                weight: 900;
+                family: v.$fuente-noto;
+                size: 1.5rem;
+            }
+        }
+
+        a {
+            color: v.$negro;
+            padding: .25rem;
+            font: {
+                size: .9rem;
+                family: v.$fuente-noto;
+            }
+
+            &:hover {
+                color: v.$blanco;
+            }
+        }
+
+        img {
+            max-width: 100%;
+        }
+
+        .enviar-a {
+            display: inline-block;
+            padding: .3rem 3rem;
+            border-radius: 10px;
+            background: v.$naranja;
+        }
+    }
+
+    .reporte {
+        border: none;
+        display: flex;
+        flex-direction: column;
+        padding: 1rem;
+    }
+}
